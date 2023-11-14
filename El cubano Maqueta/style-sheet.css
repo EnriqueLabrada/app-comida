@@ -1,0 +1,105 @@
+/*Barra de navegacion  */
+
+ /* body{
+  background-image: url(./imagenes/LOGO.jpg);
+  background-size: 800px;
+  background-repeat: no-repeat; 
+  background-position: 50%;
+
+}  */
+
+/* #prueba{
+    background-image: url(./imagenes/LOGO.jpg);
+  background-size: 600px;
+  background-repeat: no-repeat; 
+  background-position: 50%;
+} */
+
+#nav {
+    position: fixed;
+    z-index: 1;
+}
+
+nav img{
+    max-width: 10%;
+    max-width: 10%;
+}
+
+nav .nav-link {
+    margin-left: 50px;
+}
+
+nav form {
+ margin-right: 100px;
+}
+
+
+.nav-link {
+    font-size: 20px; 
+}
+
+
+#link-productos:hover .bi-basket {
+    color: rgb(119, 187, 16);
+    transition: all 0.3s;
+}
+
+#link-comida:hover .bi-egg-fried {
+    color: rgb(236, 244, 8);
+    transition: all 0.3s;
+}
+
+#link-bebida:hover .bi-cup-straw {
+    color: rgb(205, 138, 13);
+    transition: all 0.3s;
+}
+
+#link-aseo:hover .bi-stars {
+    color: rgb(13, 81, 208);
+    transition: all 0.3s;
+}
+
+/* Productos */
+
+main {
+    padding-top: 200px;
+    text-align: center;
+}
+
+h1{
+    padding-top: 100px;
+}
+
+main .bi-egg-fried {
+    color: rgb(236, 244, 8);
+}
+main .bi-cup-straw {
+    color: rgb(205, 138, 13);
+}
+
+main .bi-stars {
+    color: rgb(13, 81, 208);
+}
+
+
+.card {
+    margin: 30px;
+    margin-left: 60px;
+}
+
+
+.precio {
+    color: rgb(18, 175, 49);
+
+}
+
+.card {
+    min-height: 500px;
+    max-width: 400px;
+}
+
+.card img{
+   min-width: 200px;
+   min-height: 200px;
+  
+}
