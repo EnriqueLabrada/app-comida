@@ -1,0 +1,42 @@
+main {
+    padding-top: 200px;
+    text-align: center;
+}
+
+h1{
+    padding-top: 100px;
+}
+
+main .bi-egg-fried {
+    color: rgb(236, 244, 8);
+}
+main .bi-cup-straw {
+    color: rgb(205, 138, 13);
+}
+
+main .bi-stars {
+    color: rgb(13, 81, 208);
+}
+
+
+.card {
+    margin: 30px;
+    margin-left: 60px;
+}
+
+
+.precio {
+    color: rgb(18, 175, 49);
+
+}
+
+.card {
+    min-height: 500px;
+    max-width: 400px;
+}
+
+.card img{
+   min-width: 200px;
+   min-height: 200px;
+  
+}

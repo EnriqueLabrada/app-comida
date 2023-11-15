@@ -1,0 +1,43 @@
+#nav {
+    position: fixed;
+    z-index: 1;
+}
+
+#Logo{
+    max-width: 10%;
+    max-width: 10%;
+}
+
+nav .nav-link {
+    margin-left: 50px;
+}
+
+nav form {
+ margin-right: 100px;
+}
+
+
+.nav-link {
+    font-size: 20px; 
+}
+
+
+#link-productos:hover .bi-basket {
+    color: rgb(119, 187, 16);
+    transition: all 0.3s;
+}
+
+#link-comida:hover .bi-egg-fried {
+    color: rgb(236, 244, 8);
+    transition: all 0.3s;
+}
+
+#link-bebida:hover .bi-cup-straw {
+    color: rgb(205, 138, 13);
+    transition: all 0.3s;
+}
+
+#link-aseo:hover .bi-stars {
+    color: rgb(13, 81, 208);
+    transition: all 0.3s;
+}
