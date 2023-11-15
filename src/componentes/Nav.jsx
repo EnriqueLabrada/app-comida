@@ -16,7 +16,7 @@ function Nav () {
           <div className='collapse navbar-collapse' id='navbarSupportedContent'>
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                 <li className='nav-item'>
-                  <a className='nav-link'  id='link-comida' href='#comida'>Comida<i className='bi bi-egg-fried'></i></a>
+                  <a className='nav-link'  id='link-comida' href='#comida'>Comida <i className='bi bi-egg-fried'></i></a>
                 </li>
                 <li className='nav-item'>
                   <a className='nav-link'  id='link-bebida' href='#bebida'>Bebida <i className='bi bi-cup-straw'></i></a>
@@ -28,12 +28,12 @@ function Nav () {
                   <a className='nav-link'  id='link-aseo' href='#aseo'>Aseo <i className='bi bi-stars'></i></a>
                 </li>
                 <li className='nav-item'>
-                    <a className='nav-link' id='link-productos' href='#e'>Pedido<i className='bi bi-basket'></i></a>
+                    <a className='nav-link' id='link-productos' href='#e'>Pedido <i className='bi bi-basket'></i></a>
                   </li>
               </ul>
-            <form className='d-flex' role='search'>
-              <input className='form-control me-2' type='search' placeholder='Buscar' aria-label='Search'/>
-              <button className='btn btn-outline-success' type='submit'>Buscar</button>
+            <form className='d-flex'  role='search'>
+              <input className='form-control me-2 search'  type='search' placeholder='Buscar' aria-label='Search'/>
+              <button className='btn btn-outline-success search' id='search' type='submit'>Buscar</button>
             </form>
           </div>
         </div>

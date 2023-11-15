@@ -1,0 +1,45 @@
+.card{
+    width: 250px;
+    
+}
+
+.card img {
+    margin-left: 20px;
+    max-width: 200px;
+}
+
+
+@media  screen and (max-width: 1283px) {
+    .card{
+        margin: 30px 10px;
+    }
+}
+@media  screen and (max-width: 1060px) {
+    .card{
+        margin: 30px 5px;
+        width: 230px;
+    }
+}
+@media  screen and (max-width: 991px) {
+    .card{
+        margin: 30px 25px;
+        width: 250px;
+    }
+}
+@media  screen and (max-width: 855px) {
+    .card{
+        margin: 30px 10px;
+        width: 230px;
+    }
+}
+@media  screen and (max-width: 767px) {
+    .card{
+        margin: 30px 0px;
+        width: 250px;
+    }
+    #card-cont{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
