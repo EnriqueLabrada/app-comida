@@ -22,7 +22,7 @@ function Nav () {
                   <a className='nav-link'  id='link-bebida' href='#bebida'>Bebida <i className='bi bi-cup-straw'></i></a>
                 </li>
                 <li className='nav-item'>
-                    <a className='nav-link'  id='link-bebida' href='#bebida'>Utiles <i className='bi bi-tools'></i></a>
+                    <a className='nav-link'  id='link-utiles' href='#Utiles'>Utiles <i className='bi bi-tools'></i></a>
                   </li>
                 <li className='nav-item'>
                   <a className='nav-link'  id='link-aseo' href='#aseo'>Aseo <i className='bi bi-stars'></i></a>
