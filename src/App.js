@@ -5,6 +5,7 @@ import { listaDePedidos } from './componentes/Producto'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import Pedido from './componentes/Pedido'
 
 
 function App () {
@@ -38,6 +39,7 @@ function App () {
                     <Producto nombre={'Pasta'} precio={'100$'} alt={'pasta'} url={'pasta.png'}></Producto>
                 </div>
             </main>
+            <Pedido></Pedido>
         </>
     )
 }
