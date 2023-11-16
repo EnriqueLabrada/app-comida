@@ -23,22 +23,27 @@ nav form {
 }
 
 
-#link-productos:hover .bi-basket  {
+#link-productos:hover   {
     color: rgb(119, 187, 16);
     transition: all 0.3s;
 }
 
-#link-comida:hover .bi-egg-fried {
+#link-comida:hover  {
     color: #ecf408;
     transition: all 0.3s;
 }
 
-#link-bebida:hover .bi-cup-straw {
+#link-bebida:hover  {
     color: rgb(205, 138, 13);
     transition: all 0.3s;
 }
 
-#link-aseo:hover .bi-stars  {
+#link-utiles:hover  {
+    color: rgb(158, 0, 92);
+    transition: all 0.3s;
+}
+
+#link-aseo:hover   {
     color: rgb(13, 81, 208);
     transition: all 0.3s;
 }
