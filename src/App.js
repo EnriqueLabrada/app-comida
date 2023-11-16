@@ -15,7 +15,7 @@ function App () {
                 <div id='comida-container' className='container-fluid d-flex row' >
                     <Producto nombre={'Pan'} precio={'200$'} alt={'pan'} url={'pan.png'} ></Producto>
                     <Producto nombre={'Galletas'} precio={'220$'} alt={'galletas'} url={'galletas.png'}></Producto>
-                    <Producto nombre={'Galleticas'} precio={'50'} alt={'galleticas'} url={'galleticas.png'}></Producto>
+                    <Producto nombre={'Galleticas'} precio={'50$'} alt={'galleticas'} url={'galleticas.png'}></Producto>
                     <Producto nombre={'Palitroque'} precio={'220$'} alt={'Palitroque'} url={'palitroque.png'}></Producto>
                     <Producto nombre={'Arroz con leche'} precio={'1100$'} alt={'Arroz con leche'} url={'arroz-con-leche.png'}></Producto>
                     <Producto nombre={'Galletas'} precio={'220$'} alt={'Galletas'} url={'galletas.png'}></Producto>
