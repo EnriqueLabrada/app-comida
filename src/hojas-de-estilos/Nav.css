@@ -1,6 +1,7 @@
 #nav {
     position: fixed;
     z-index: 1;
+    
 }
 
 #Logo{
@@ -22,13 +23,13 @@ nav form {
 }
 
 
-#link-productos:hover .bi-basket {
+#link-productos:hover .bi-basket  {
     color: rgb(119, 187, 16);
     transition: all 0.3s;
 }
 
 #link-comida:hover .bi-egg-fried {
-    color: rgb(236, 244, 8);
+    color: #ecf408;
     transition: all 0.3s;
 }
 
@@ -37,7 +38,45 @@ nav form {
     transition: all 0.3s;
 }
 
-#link-aseo:hover .bi-stars {
+#link-aseo:hover .bi-stars  {
     color: rgb(13, 81, 208);
     transition: all 0.3s;
+}
+
+#search{
+    color: black;
+    border: #BDD7FA 2px solid ;
+}
+
+
+#search:hover{
+    color: black;
+    background-color: #BDD7FA ;
+    transition: all 0.3s;
+}
+
+@media  screen and (max-width: 1294px) {
+    .nav-link {
+        font-size: 16px; 
+    }
+    .search{
+        margin-right: -60px;
+    }
+}
+@media  screen and (max-width: 1135px) {
+    .search{
+        margin-right: -158px;
+        font-size: 14px;
+    }
+}
+@media  screen and (max-width: 1005px) {
+    .nav-link {
+        font-size: 15px; 
+    }
+}
+@media  screen and (max-width: 992px) {
+    .nav-link {
+        font-size: 19px;
+        width: 90px;
+    }
 }
