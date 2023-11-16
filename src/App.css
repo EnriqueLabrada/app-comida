@@ -23,6 +23,16 @@ main .bi-stars {
     color: rgb(13, 81, 208);
 }
 
+form div {
+    display: flex;
+    flex-direction: row;
+    max-width: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
 
 .card {
     margin: 30px;
