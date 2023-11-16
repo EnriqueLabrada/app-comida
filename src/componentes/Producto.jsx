@@ -5,8 +5,17 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../hojas-de-estilos/Proucto.css'
 import { useState } from 'react'
 
+let listaDePedidos = []
 
-function Producto ({ precio, nombre, url, alt }) {
+function Producto ({ precio, nombre, url, alt,  }) {
+
+    class Pedido {
+        constructor(precio, nombre, monto) {
+            this.precio = precio
+            this.nombre = nombre
+            this.monto = monto
+        }
+    }
 
     const[cantidad,setCantidad] = useState(0)
 
@@ -19,6 +28,14 @@ function Producto ({ precio, nombre, url, alt }) {
             setCantidad( cantidad - 1)    
         }
     }
+
+    const funPedido = () => {
+       const add =  new Pedido(precio, nombre, cantidad)
+       listaDePedidos  =[...listaDePedidos, add]
+       console.log(listaDePedidos)
+       setCantidad(0)
+    }
+
 
     return (
         <div className='col-12 col-md-4 col-lg-3' id='card-cont' >
@@ -34,7 +51,7 @@ function Producto ({ precio, nombre, url, alt }) {
                             <div id='contador'>{cantidad}</div>
                             <div id='menos' className='menos btn btn-primary'  onClick={disminuir}> - </div>
                         </div>
-                        <div  className='btn btn-primary'>Añadir al carro <i className='bi bi-cart4'></i></div>
+                        <div  className='btn btn-primary' onClick={funPedido} >Añadir al carro <i className='bi bi-cart4'></i></div>
                     </form>
                     </div>
                 </div>
@@ -43,3 +60,4 @@ function Producto ({ precio, nombre, url, alt }) {
 }
 
 export default Producto
+export {listaDePedidos}
