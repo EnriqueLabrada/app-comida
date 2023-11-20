@@ -3,26 +3,28 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../hojas-de-estilos/Proucto.css'
+import { v4 } from 'uuid'
 import { useState } from 'react'
 
-let listaDePedidos = []
 
-function Producto ({ precio, nombre, url, alt,  }) {
 
-    class Pedido {
-        constructor(precio, nombre, monto) {
+function Producto ({ precio, nombre, url, alt, actualizarLista, listaDePedidos}) {
+
+    
+    class pedido {
+        constructor(precio, nombre, monto, num) {
             this.precio = precio
             this.nombre = nombre
             this.monto = monto
+            this.num = num
         }
     }
-
     const[cantidad,setCantidad] = useState(0)
 
     const aumentar = () => {
         setCantidad(cantidad + 1) 
     }
-
+    
     const disminuir = () => {
         if(cantidad > 0) {
             setCantidad( cantidad - 1)    
@@ -30,12 +32,14 @@ function Producto ({ precio, nombre, url, alt,  }) {
     }
 
     const funPedido = () => {
-       const add =  new Pedido(precio, nombre, cantidad)
-       listaDePedidos  =[...listaDePedidos, add]
-       console.log(listaDePedidos)
-       setCantidad(0)
-    }
+        if(cantidad>0){
+            const add =  new pedido(precio, nombre, cantidad, v4())
+            setCantidad(0)
+            actualizarLista(listaDePedidos,add)
+        }
+     }
 
+    
 
     return (
         <div className='col-12 col-md-4 col-lg-3' id='card-cont' >
@@ -59,5 +63,7 @@ function Producto ({ precio, nombre, url, alt,  }) {
     )
 }
 
+
+
 export default Producto
-export {listaDePedidos}
+

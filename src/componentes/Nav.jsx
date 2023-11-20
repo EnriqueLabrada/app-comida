@@ -28,7 +28,7 @@ function Nav () {
                   <a className='nav-link'  id='link-aseo' href='#aseo'>Aseo <i className='bi bi-stars'></i></a>
                 </li>
                 <li className='nav-item'>
-                    <a className='nav-link' id='link-productos' href='#e'>Pedido <i className='bi bi-basket'></i></a>
+                    <a className='nav-link' id='link-productos' href='#pedido'  >Pedido <i className='bi bi-basket'></i></a>
                   </li>
               </ul>
             <form className='d-flex'  role='search'>
