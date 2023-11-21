@@ -44,7 +44,7 @@ function Producto ({ precio, nombre, url, alt, actualizarLista, listaDePedidos})
     return (
         <div className='col-12 col-md-4 col-lg-3' id='card-cont' >
                 <div className='card' id='card' >
-                    <img src={require(`../imagenes/${url}`)} className='card-img-top'  alt={alt}/>
+                    <img id='imagen-producto' src={require(`../imagenes/${url}`)} className='card-img-top'  alt={alt}/>
                     <div className='card-body' id='prueba'>
                     <h5 className='card-title'>{nombre}</h5>
                     <p className='precio'>{precio}</p>

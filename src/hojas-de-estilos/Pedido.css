@@ -78,7 +78,6 @@
     margin: 35px;
     cursor: pointer;
    }
-   
    #container-botones button span {
     cursor: pointer;
     display: inline-block;
@@ -159,4 +158,18 @@
     background-color: #c4c4c4;
     transition: ease 0.5s;
   }
-  
+  @media  screen and (max-width: 285px) {
+    #pedido table {
+      width: 250px;
+      font-size: 15px;
+      margin: 40px 5px;
+    }
+    .card-pedido {
+      min-width: 250px;
+      min-height: 350px;
+      margin: 100px;
+     }
+     #container-botones button {
+      margin: 20px;
+     }
+}
