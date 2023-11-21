@@ -12,6 +12,16 @@
                 0.3em 0.3em 1em rgba(0,0,0,0.3);
    }
 
+  #borrar {
+    cursor: pointer;
+    margin-right: 5px;
+   }
+
+   #borrar:hover{
+    color: red;
+    transition: ease-in-out 0.2s all;
+   }
+
    #pedido{
         display: flex;
         justify-content: center;
