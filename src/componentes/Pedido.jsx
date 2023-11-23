@@ -47,7 +47,7 @@ function Pedido ({fun, lista}) {
         }else if(validator.isEmpty(direccion)){
             setDireccion('');
             setclaseclasedireccion(false);
-        }else {
+        }else  {
             alert('todo correcto')
         }
     }    
@@ -86,9 +86,9 @@ function Pedido ({fun, lista}) {
             <div id='formulario'>
                 <div className="card-formulario">
                     <div className="card__form">
-                    <input id='nombre' className={clasenombre ? 'correcto' :'fallo'}  placeholder='Nombre' type="text" value={nombre} onChange={cambioEnInput}/>
-                    <input id='telefono' className={clasetelefono ? 'correcto' :'fallo'} placeholder='Telefono' type='tel' value={telefono} onChange={cambioEnInput}/>
-                    <input id='direccion' className={clasedireccion ? 'correcto' :'fallo'} placeholder='Direccion' type="text" value={direccion} onChange={cambioEnInput}/>
+                    <input id='nombre' className={clasenombre ? 'correcto' :'fallo'}  placeholder={clasenombre ? 'Nombre' :'Nombre no valido'} type="text" value={nombre} onChange={cambioEnInput}/>
+                    <input id='telefono' className={clasetelefono ? 'correcto' :'fallo'} placeholder={clasetelefono ? 'Telefono' :'Telefono no valido'} type='tel' value={telefono} onChange={cambioEnInput}/>
+                    <input id='direccion' className={clasedireccion ? 'correcto' :'fallo'} placeholder={clasedireccion ? 'Direccion' :'Direccion no valido'} type="text" value={direccion} onChange={cambioEnInput}/>
                     </div>
                 </div>
             </div>
