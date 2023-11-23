@@ -59,6 +59,7 @@
   /* botones */
   #container-botones{
     display: flex;
+    justify-content: center;
   }
   #container-botones button {
     display: flex;
@@ -76,6 +77,7 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 35px;
+    margin-top: -15px;
     cursor: pointer;
    }
    #container-botones button span {
@@ -143,21 +145,32 @@
     flex-direction: column;
     gap: 10px;
   }
-  
-  .card__form input {
+.correcto:focus,.fallo:focus{
+  background: rgb(228, 228, 228);
+}
+
+  .correcto{
     margin-top: 10px;
     outline: 0;
-    background: rgb(255, 255, 255);
+    background: #ffffff;
     box-shadow: transparent 0px 0px 0px 1px inset;
     padding: 0.6em;
     border-radius: 14px;
     border: 1px solid #333;
     color: black;
   }
-  .card__form input:focus{
-    background-color: #c4c4c4;
-    transition: ease 0.5s;
+
+  .fallo{
+    background: rgb(255, 255, 255);
+    border: 1px solid #ff5c5c;
+    margin-top: 10px;
+    outline: 0;
+    box-shadow: transparent 0px 0px 0px 1px inset;
+    padding: 0.6em;
+    border-radius: 14px;
+    color: black;
   }
+
   @media  screen and (max-width: 285px) {
     #pedido table {
       width: 250px;
