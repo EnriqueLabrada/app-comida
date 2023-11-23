@@ -48,7 +48,7 @@ function Pedido ({fun, lista}) {
             setDireccion('');
             setclaseclasedireccion(false);
         }else {
-            
+            alert('todo correcto')
         }
     }    
 
