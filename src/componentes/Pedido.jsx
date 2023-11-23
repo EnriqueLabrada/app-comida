@@ -5,14 +5,55 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../hojas-de-estilos/Pedido.css'
 // import { listaDePedidos } from './Producto'
 import {useState} from 'react'
-
+import validator from 'validator'
 function Pedido ({fun, lista}) {
 
     const [monto, setMonto] = useState(0)
 
+    // formulario
+    
+    const [nombre, setNombre] = useState('');
+    const [telefono, setTelefono] = useState('');
+    const [direccion, setDireccion] = useState('');
+
+    const [clasenombre, setclasenombre] = useState(true);
+    const [clasetelefono, setclaseclasetelefono] = useState(true);
+    const [clasedireccion, setclaseclasedireccion] = useState(true);
+      
+    const cambioEnInput = (event) => {
+        const {id,value} = event.target;
+      
+        if (id === 'nombre') {
+            setNombre(value);
+        }else if (id === 'telefono') {
+            setTelefono(value);
+        }else if (id === 'direccion') {
+            setDireccion(value);
+        }
+    }
+      
+    const clickConfirmar = () => {
+
+        setclasenombre(true)
+        setclaseclasetelefono(true)
+        setclaseclasedireccion(true)
+        
+        if (!validator.isAlpha(nombre)) {
+            setNombre('');
+            setclasenombre(false);
+        }else if(!validator.isNumeric(telefono) ){
+            setTelefono('');
+            setclaseclasetelefono(false);
+        }else if(validator.isEmpty(direccion)){
+            setDireccion('');
+            setclaseclasedireccion(false);
+        }else  {
+            alert('todo correcto')
+        }
+    }    
 
     return (
-    <div id='pedido'>
+    <div id='pedido' >
         <div className="card-pedido shadow">
             <div id='container-pedidos'>
                 <table id='tabla-pedidos'>
@@ -42,25 +83,23 @@ function Pedido ({fun, lista}) {
             ))}
                 </table>                       
             </div>
-            
             <div id='formulario'>
-            <div className="card-formulario">
-                <div className="card__form">
-                    <input id='nombre' placeholder="Nombre" type="text"/>
-                    <input id='telefono' placeholder="Telefono" type='tel'/>
-                    <input id='direccion' placeholder="Direccion" type="text"/>
+                <div className="card-formulario">
+                    <div className="card__form">
+                    <input id='nombre' className={clasenombre ? 'correcto' :'fallo'}  placeholder={clasenombre ? 'Nombre' :'Nombre no valido'} type="text" value={nombre} onChange={cambioEnInput}/>
+                    <input id='telefono' className={clasetelefono ? 'correcto' :'fallo'} placeholder={clasetelefono ? 'Telefono' :'Telefono no valido'} type='tel' value={telefono} onChange={cambioEnInput}/>
+                    <input id='direccion' className={clasedireccion ? 'correcto' :'fallo'} placeholder={clasedireccion ? 'Direccion' :'Direccion no valido'} type="text" value={direccion} onChange={cambioEnInput}/>
+                    </div>
                 </div>
             </div>
-            </div>
             <div id='container-botones'>
-                <button id='confirmar'>
+                    <button id='confirmar' onClick={clickConfirmar}>
                     <span>Confirmar</span>
-                </button>
+                    </button>
             </div>
-            
         </div>
     </div>
     )
 }
 
-export default Pedido
+export default Pedido;
