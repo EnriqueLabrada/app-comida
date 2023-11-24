@@ -11,7 +11,6 @@ import { useState } from 'react'
 function App () {
     let [lista, setLista] = useState([])
     
-
     const actualizarLista = (list, add) => {
          list = [...list, add]
         setLista(list)
@@ -21,7 +20,12 @@ function App () {
         setLista(list = list.filter(pedido => pedido.num !== num)) 
      }
 
-    
+    let Total = 0
+    let mensajePedido =''
+
+    lista.map(pedido => Total = parseInt(pedido.precio)*parseInt(pedido.monto) + Total )
+    lista.map(pedido => mensajePedido = mensajePedido + `Nombre: ${pedido.nombre} Cantidad: ${pedido.monto} Precio: ${pedido.precio} c/u  \n`)
+
     return(
         <>
         <Nav ></Nav>
@@ -51,7 +55,7 @@ function App () {
                     <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Shampoo'} precio={'350$'} alt={'Shampoo'} url={'shampoo.png'}></Producto>
                     <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Pasta'} precio={'100$'} alt={'pasta'} url={'pasta.png'}></Producto>
                 </div>
-                <Pedido fun={eliminarPedido} lista={lista}></Pedido>
+                <Pedido fun={eliminarPedido} lista={lista} total={Total} mensajePedido={mensajePedido}></Pedido>
             </main>
         </>
     )

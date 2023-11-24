@@ -3,10 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../hojas-de-estilos/Pedido.css'
-// import { listaDePedidos } from './Producto'
 import {useState} from 'react'
 import validator from 'validator'
-function Pedido ({fun, lista}) {
+
+
+
+function Pedido ({fun, lista, total, mensajePedido}) {
 
     const [monto, setMonto] = useState(0)
 
@@ -48,7 +50,7 @@ function Pedido ({fun, lista}) {
             setDireccion('');
             setclaseclasedireccion(false);
         }else  {
-            alert('todo correcto')
+            window.open(`https://api.whatsapp.com/send?phone=56574698&text=Pedido de:${nombre},\n   Telefono:${telefono},  \n Dirección:${direccion},   \n  Productos:${mensajePedido},  \n  Total: $${total}`, 'blank')
         }
     }    
 
