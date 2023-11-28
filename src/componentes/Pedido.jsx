@@ -40,13 +40,13 @@ function Pedido ({fun, lista, total, mensajePedido}) {
         setclaseclasetelefono(true)
         setclaseclasedireccion(true)
         
-        if (!validator.isAlpha(nombre)) {
+        if (!validator.isAlpha(nombre) || !validator.isByteLength(nombre,{min: 3, max: 30})) {
             setNombre('');
             setclasenombre(false);
-        }else if(!validator.isNumeric(telefono) ){
+        }else if(!validator.isNumeric(telefono)  || !validator.isByteLength(telefono,{min: 7, max: 17}) ){
             setTelefono('');
             setclaseclasetelefono(false);
-        }else if(validator.isEmpty(direccion)){
+        }else if(validator.isEmpty(direccion)  || !validator.isByteLength(nombre,{min: 3, max: 50})){
             setDireccion('');
             setclaseclasedireccion(false);
         }else  {
