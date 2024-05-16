@@ -3,10 +3,8 @@ main {
     text-align: center;
 }
 
-#comida{
-    padding-top: 100px;
-    margin-top: -30px;  
-  }
+
+
 
 h1{
     padding-top: 100px;
@@ -58,8 +56,5 @@ form div {
 
 
 @media  screen and (max-width: 900px) {
-   #comida{
-      padding-top: 0px;
-      margin-top: -50px;  
-    }
+   
 }
