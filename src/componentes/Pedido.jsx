@@ -35,7 +35,7 @@ function Pedido ({fun, lista, total, mensajePedido}) {
     }
       
     const clickConfirmar = () => {
-
+        console.log(monto)
         setclasenombre(true)
         setclaseclasetelefono(true)
         setclaseclasedireccion(true)
