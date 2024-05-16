@@ -14,7 +14,6 @@ function App () {
     const actualizarLista = (list, add) => {
          list = [...list, add]
         setLista(list)
-        alert('Añadido al carrito con éxito') 
     }
     const eliminarPedido = (list, num) => {
         setLista(list = list.filter(pedido => pedido.num !== num)) 
@@ -30,30 +29,33 @@ function App () {
         <>
         <Nav ></Nav>
             <main>
-                <h1 id='comida' >Comida <i class='bi bi-egg-fried'></i></h1>
-                <div id='comida-container' className='container-fluid d-flex row' >
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Pan'} precio={'200$'} alt={'pan'} url={'pan.png'} ></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Galletas'} precio={'220$'} alt={'galletas'} url={'galletas.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Galleticas'} precio={'50$'} alt={'galleticas'} url={'galleticas.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Palitroque'} precio={'220$'} alt={'Palitroque'} url={'palitroque.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Arroz con leche'} precio={'1100$'} alt={'Arroz con leche'} url={'arroz-con-leche.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Galletas'} precio={'220$'} alt={'Galletas'} url={'galletas.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Palitroque'} precio={'220$'} alt={'Palitroque'} url={'palitroque.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Pan'} precio={'200$'} alt={'asd'} url={'pan.png'}></Producto>
+                <h1 id='entrantes' >Entrantes </h1>
+                <div id='entrantes-container' className='container-fluid d-flex row' >
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Croquetas'} precio={'400$'} alt={'croquetas'} url={'croquetas.jpg'} ></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Crema de queso'} precio={'520$'} alt={'crema'} url={'crema.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Tostones rellenos'} precio={'460$'} alt={'tostones'} url={'tostones.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Eperlán de Pescado'} precio={'560$'} alt={'esperlan'} url={'esperlan.jpg'}></Producto>
                 </div>
-                <h1 id='bebida'>Bebida <i class='bi bi-cup-straw'></i></h1>
-                <div id='bebida-container' className='container-fluid d-flex row'>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Cerveza'} precio={'200$'} alt={'Cerveza'} url={'cerveza.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Cerveza'} precio={'200$'} alt={'Cerveza'} url={'cerveza.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Cerveza'} precio={'200$'} alt={'Cerveza'} url={'cerveza.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Cerveza'} precio={'200$'} alt={'Cerveza'} url={'cerveza.png'}></Producto> 
-                </div >
-                <h1 id='aseo'>Aseo<i class='bi bi-stars'></i></h1>
-                <div id='aseo-container' className='container-fluid d-flex row'>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Papel'} precio={'130$'} alt={'Papel'} url={'papel.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Detergente'} precio={'800$'} alt={'detergente'} url={'detergente.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Shampoo'} precio={'350$'} alt={'Shampoo'} url={'shampoo.png'}></Producto>
-                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Pasta'} precio={'100$'} alt={'pasta'} url={'pasta.png'}></Producto>
+                <h1 id='comida'>Comida</h1>
+                <div id='comida-container' className='container-fluid d-flex row'>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Bistec Uruguayo'} precio={'800$'} alt={'uruguayo'} url={'uruguayo.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Lomo de cerdo'} precio={'900$'} alt={'lomo'} url={'lomo.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Pizza Napolitana'} precio={'450$'} alt={'Pizza'} url={'piza.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Espaguetis'} precio={'400$'} alt={'espaguetis'} url={'espagueti.jpg'}></Producto>
+                </div>
+                <h1 id='guarniciones'>Guarniciones</h1>
+                <div id='guarniciones-container' className='container-fluid d-flex row'>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Arroz'} precio={'300$'} alt={'arroz'} url={'arroz.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Arroz congris'} precio={'340$'} alt={'congris'} url={'congri.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Arroz frito'} precio={'420$'} alt={'arroz-frito'} url={'arroz-frito.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Garbanzos fritos'} precio={'620$'} alt={'garbanzos'} url={'garbanzos.jpg'}></Producto>
+                </div>
+                <h1 id='liquidos'>Líquidos</h1>
+                <div id='liquidos-container' className='container-fluid d-flex row'>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Malta'} precio={'210$'} alt={'malta'} url={'malta-importada.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Cerveza'} precio={'190$'} alt={'cerveza'} url={'cerveza.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Pepsi'} precio={'220$'} alt={'pepsi'} url={'pepsi.jpg'}></Producto>
+                    <Producto listaDePedidos={lista} actualizarLista={actualizarLista}  nombre={'Jugo de Manzana'} precio={'520$'} alt={'Jugo de manzana'} url={'jugo-manzana.jpg'}></Producto>
                 </div>
                 <Pedido fun={eliminarPedido} lista={lista} total={Total} mensajePedido={mensajePedido}></Pedido>
             </main>
